@@ -32,6 +32,8 @@
     @media (max-width: 768px) {
       #sidebar {
         left: -250px;
+        height: 150vh;
+      position: fixed;
       }
       
       #sidebar.active {
@@ -41,7 +43,6 @@
       #content {
         margin-left: 0;
       }
-
     }
     a {
       color: inherit;
@@ -51,6 +52,21 @@
 
     a:hover {
       color: rgb(132, 130, 130); /* Change to the color you want for the hover effect */
+    }
+
+    .line-with-text {
+      display: flex;
+      align-items: center;
+    }
+
+    .line {
+      flex: 1;
+      height: 2px;
+      background-color: rgb(255, 253, 253);
+    }
+
+    .text {
+      padding: 0 10px;
     }
   </style>
 </head>
@@ -65,16 +81,41 @@
     <div class="row">
       <small class="text-secondary">DevOps Engineer</small>
     </div>
-    <p class="mt-3">Polytechnic University of the Phillipines</p>
-    <a href="https://www.facebook.com/npd07" target="_blank">
-      <i class="fab fa-facebook fa-lg"></i>
-    </a>
-    <a href="#" target="_blank">
-      <i class="fas fa-envelope fa-lg"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/niño-datiles-6622221b8" target="_blank">
-      <i class="fab fa-linkedin fa-lg"></i>
-    </a>
+    <div class="row">
+      <p class="mt-3">Polytechnic University of the Phillipines</p>
+    </div>
+    <div class="row">
+      <div class="col-1">
+      <p href="#" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </p>
+      </div>
+      <div class="col-10">
+        <p>ndatiles01@gmail.com</p>
+      </div>
+    </div>
+    <div class="line-with-text mt-5">
+      <div class="line"></div>
+      <div class="text">Visit me at</div>
+      <div class="line"></div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <a href="https://www.facebook.com/npd07" target="_blank">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://www.linkedin.com/in/niño-datiles-6622221b8" target="_blank">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a> 
+      </div>
+      <div class="col">
+        <a href="https://www.instagram.com/ndatiles01" target="_blank">
+          <i class="fab fa-instagram fa-lg"></i> 
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -87,6 +128,39 @@
   <h2 class="fw-bolder">Work Experience</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   <h2 class="fw-bolder">Skills</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 
