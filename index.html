@@ -33,7 +33,6 @@
       #sidebar {
         left: -250px;
         height: 150vh;
-      position: fixed;
       }
       
       #sidebar.active {
@@ -61,12 +60,22 @@
 
     .line {
       flex: 1;
-      height: 2px;
+      height: 1px;
       background-color: rgb(255, 253, 253);
     }
 
     .text {
       padding: 0 10px;
+    }
+
+    .btn-transparent {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid transparent;
+      color: inherit; /* Use the default text color */
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    body{
+      background: linear-gradient(20deg, #c6c6c6, #ffffff);
     }
   </style>
 </head>
@@ -94,33 +103,34 @@
         <p>ndatiles01@gmail.com</p>
       </div>
     </div>
-    <div class="line-with-text mt-5">
-      <div class="line"></div>
-      <div class="text">Visit me at</div>
-      <div class="line"></div>
-    </div>
-    <div class="row justify-content-md-center">
-      <div class="col">
+    <footer>
+      <div class="line-with-text mt-5">
+        <div class="line"></div>
+        <div class="text">Visit me at</div>
+        <div class="line"></div>
+      </div>
+      <span class="p-1">
         <a href="https://www.facebook.com/npd07" target="_blank">
           <i class="fab fa-facebook fa-lg"></i>
         </a>
-      </div>
-      <div class="col">
+      </span>
+      <span class="p-1">
         <a href="https://www.linkedin.com/in/niño-datiles-6622221b8" target="_blank">
           <i class="fab fa-linkedin fa-lg"></i>
-        </a> 
-      </div>
-      <div class="col">
+        </a>
+      </span>
+      <span class="p-1">
         <a href="https://www.instagram.com/ndatiles01" target="_blank">
           <i class="fab fa-instagram fa-lg"></i> 
-        </a>
-      </div>
-    </div>
+        </a> 
+      </span>
+    </footer>
   </div>
-</div>
 
+</div>
 <div id="content">
-  <button id="menu-toggle-2" class="btn btn-dark d-md-none">
+  
+  <button id="menu-toggle-2" class="btn btn-transparent d-md-none float-start" style="position: fixed; background-color: rgba(0, 0, 0, 0.5);">
     <i class="fa fa-bars"></i>
   </button>
   <h2 class="fw-bolder">About Me</h2>
@@ -136,32 +146,8 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+  
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
