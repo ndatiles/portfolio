@@ -18,14 +18,12 @@
     body {
       font-family: Arial, sans-serif;
       min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.125em;
-        line-height: 1.6;
-        color: #333;
-        background: #ddd;
-        background-size: 300%;
+      display: flex;
+      font-size: 1.125em;
+      line-height: 1.6;
+      color: #333;
+      background: #ddd;
+      background-size: 300%;
       background-image: var(--gradient);
       animation: bg-animation 25s infinite;
     }
@@ -48,6 +46,8 @@
     #content {
       margin-left: 250px;
       padding: 15px;
+      justify-content: center;
+      align-items: center; 
     }
     
     #sidebar.active ~ #content {
@@ -108,6 +108,14 @@
     .fade-in-text.active {
       opacity: 1; /* Change opacity to 1 (fully visible) for the fade-in effect */
     }
+
+    .centered-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh; /* Adjust this if you want a different height */
+    }
   </style>
 </head>
 <body>
@@ -161,18 +169,24 @@
 </div>
 <div id="content" class="text-white">
   
-  <button id="menu-toggle-2" class="btn btn-transparent d-md-none float-start" style="position: fixed; background-color: rgba(0, 0, 0, 0.5);">
+  <button id="menu-toggle-2" class="btn btn-transparent d-md-none " style="position: fixed; background-color: rgba(0, 0, 0, 0.5);">
     <i class="fa fa-bars"></i>
   </button>
   <!-- <h2 class="fw-bolder">About Me</h2> -->
-  <div class="row">
-    <p class="fade-in-text">Hi, I'm Niño, a DevOps Engineer with a passion for software development automation. <br> Welcome to my portfolio!
-    With a background in Software Engineering, I specialize in Automation. My expertise lies in Continous Integration and Continous Delivery.
-    Throughout my career, I've had the privilege of creating different pipelines to integrate different technologies/tools for software development. These experiences have honed my skills and allowed me to contribute to different projects I've handeled.
-    <!-- I'm deeply passionate about [Your Passion or Cause]. My motivation stems from [Reasons or Values]. I believe in [Your Beliefs or Principles] and strive to [Your Aspirations]. -->
-    <!-- <p>In the future, I aim to [Your Future Goals or Aspirations]. I'm excited about [Specific Projects or Areas] and look forward to [Your Vision for the Future].</p> -->
-    <br>Feel free to explore my portfolio to learn more about my work. If you'd like to get in touch, I'd love to connect. You can reach me at my email address or connect with me on my social media accounts.</p>
+  <div class="centered-container">
+    <div class="row">
+      <div class="col text-center">
+        <p class="fade-in-text">Hi, I'm Niño, a DevOps Engineer with a passion for software development automation. <br> Welcome to my portfolio!
+          With a background in Software Engineering, I specialize in Automation. My expertise lies in Continous Integration and Continous Delivery.
+          Throughout my career, I've had the privilege of creating different pipelines to integrate different technologies/tools for software development. These experiences have honed my skills and allowed me to contribute to different projects I've handled.
+          <!-- I'm deeply passionate about [Your Passion or Cause]. My motivation stems from [Reasons or Values]. I believe in [Your Beliefs or Principles] and strive to [Your Aspirations]. -->
+          <!-- <p>In the future, I aim to [Your Future Goals or Aspirations]. I'm excited about [Specific Projects or Areas] and look forward to [Your Vision for the Future].</p> -->
+          <br>Feel free to explore my portfolio to learn more about my work. If you'd like to get in touch, I'd love to connect. You can reach me at my email address or connect with me on my social media accounts.</p>
+      </div>
+
+    </div>
   </div>
+  
   
   <!-- <h2 class="fw-bolder">Work Experience</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
