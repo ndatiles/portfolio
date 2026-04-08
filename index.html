@@ -3,228 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="My Self Introduction">
-  <meta name="keywords" content="Niño P. Datiles, Portfolio">
-  <meta name="author" content="Niño P. Datiles">
   <title>Portfolio - Niño P. Datiles</title>
-  <link rel="icon" type="image/x-icon" href="images/my-logo.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <style>
-    :root {
-        /* --gradient: linear-gradient(45deg, #09f3db, rgb(245, 9, 245), #b8f709); */
-        --gradient: linear-gradient(45deg, #020202, #ffffff);
-    }
-
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      font-size: 1.125em;
-      line-height: 1.6;
-      color: #333;
-      background: #ddd;
-      background-size: 300%;
-      background-image: var(--gradient);
-      animation: bg-animation 25s infinite;
     }
 
-    @keyframes bg-animation {
-        0% {background-position: left}
-        50% {background-position: right}
-        100% {background-position: left}
+    html {
+      scroll-behavior: smooth;
     }
-    
-    #sidebar {
-      height: 100vh;
+
+    /* BODY BACKGROUND IMAGE */
+    body {
+      color: #fff;
+      /* background: url('https://picsum.photos/1600/900') no-repeat center center fixed; */
+      background: url('https://wallpapers.com/images/hd/black-and-purple-futuristic-abstract-994gbb2x9x12lpe3.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* NAVBAR */
+    nav {
       position: fixed;
+      width: 100%;
       top: 0;
       left: 0;
-      width: 250px;
-      transition: all 0.3s;
-    }
-    
-    #content {
-      margin-left: 250px;
-      padding: 15px;
-      justify-content: center;
-      align-items: center; 
-    }
-    
-    #sidebar.active ~ #content {
-      margin-left: 250px; /* Adjust the margin when sidebar is active */
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      z-index: 1000;
+      background: transparent;
     }
 
-    @media (max-width: 768px) {
-      #sidebar {
-        left: -250px;
-        height: 150vh;
-      }
-      
-      #sidebar.active {
-        left: 0;
-      }
-      
-      #content {
-        margin-left: 0;
-      }
+    nav.scrolled {
+      background: rgba(0, 0, 0, 0.8);
     }
-    a {
-      color: inherit;
+
+    nav h1 {
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
       text-decoration: none;
-      transition: color 0.5s; /* Add smooth transition effect */
+      font-weight: bold;
     }
 
-    a:hover {
-      color: rgb(132, 130, 130); /* Change to the color you want for the hover effect */
-    }
-
-    .line-with-text {
+    /* HERO */
+    .hero {
+      height: 100vh;
       display: flex;
-      align-items: center;
-    }
-
-    .line {
-      flex: 1;
-      height: 1px;
-      background-color: rgb(255, 253, 253);
-    }
-
-    .text {
-      padding: 0 10px;
-    }
-
-    .btn-transparent {
-      background-color: rgba(0, 0, 0, 0.5);
-      border: 1px solid transparent;
-      color: inherit; /* Use the default text color */
-      transition: background-color 0.3s, border-color 0.3s;
-    }
-
-    .fade-in-text {
-      opacity: 0; /* Set initial opacity to 0 (completely transparent) */
-      transition: opacity 1s ease-in-out; /* Define the transition properties */
-    }
-
-    .fade-in-text.active {
-      opacity: 1; /* Change opacity to 1 (fully visible) for the fade-in effect */
-    }
-
-    .centered-container {
-      display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 90vh; /* Adjust this if you want a different height */
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+    }
+    
+    /* TABLE */
+    .top-align {
+      vertical-align: top;
+    }
+    .right-align {
+    text-align: right;
+    }
+    .pad-left {
+      padding-left: 10px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 40px;
+      background: rgba(0, 0, 0, 0.7); /* overlay for readability */
+    }
+
+    .about, .projects, .contact {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .projects .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    /* MOBILE */
+    @media(max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<div id="sidebar" class="bg-dark bg-gradient">
-  <div class="p-4 text-center text-white">
-    <img src="images/my-image.png" class="img-fluid mb-2 rounded-circle" alt="Responsive image">
-    <div class="row">
-      <strong class="fs-3 fw-bold">Nino P. Datiles</strong>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <h1>MyPortfolio</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h2>Hello, I'm Nino</h2>
+      <p>DevOps Engineer</p>
     </div>
-    <div class="row">
-      <small class="text-secondary">DevOps Engineer</small>
-    </div>
-    <div class="row">
-      <p class="mt-3">Polytechnic University of the Phillipines</p>
-    </div>
-    <div class="row">
-      <div class="col-1">
-      <p href="#" target="_blank">
-        <i class="fas fa-envelope"></i>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a DevOps Engineer with over four years of hands-on experience building, automating, and optimizing scalable systems. Based in Manila, I graduated with a Bachelor of Science in Information Technology from the Polytechnic University of the Philippines. I specialize in streamlining development pipelines, managing cloud infrastructure, and ensuring reliable, efficient deployments. I’m passionate about bridging the gap between development and operations, continuously improving workflows, and delivering high-quality solutions that support both business and technical goals.
       </p>
-      </div>
-      <div class="col-10">
-        <p>ndatiles01@gmail.com</p>
-      </div>
     </div>
-    <footer>
-      <div class="line-with-text mt-3">
-        <div class="line"></div>
-        <div class="text">Visit me at</div>
-        <div class="line"></div>
-      </div>
-      <span class="p-1">
-        <a href="https://www.facebook.com/npd07" target="_blank">
-          <i class="fab fa-facebook fa-lg"></i>
-        </a>
-      </span>
-      <span class="p-1">
-        <a href="https://www.linkedin.com/in/niño-datiles-6622221b8" target="_blank">
-          <i class="fab fa-linkedin fa-lg"></i>
-        </a>
-      </span>
-      <span class="p-1">
-        <a href="https://www.instagram.com/ndatiles01" target="_blank">
-          <i class="fab fa-instagram fa-lg"></i> 
-        </a> 
-      </span>
-    </footer>
-  </div>
+  </section>
 
-</div>
-<div id="content" class="text-white">
-  
-  <button id="menu-toggle-2" class="btn btn-transparent d-md-none " style="position: fixed; background-color: rgba(0, 0, 0, 0.5);">
-    <i class="fa fa-bars"></i>
-  </button>
-  <!-- <h2 class="fw-bolder">About Me</h2> -->
-  <div class="centered-container">
-    <div class="row">
-      <div class="col text-center">
-        <p class="fade-in-text">Hi, I'm Niño, a DevOps Engineer with a passion for software development automation. <br> Welcome to my portfolio!
-          With a background in Software Engineering, I specialize in Automation. My expertise lies in Continous Integration and Continous Delivery.
-          Throughout my career, I've had the privilege of creating different pipelines to integrate different technologies/tools for software development. These experiences have honed my skills and allowed me to contribute to different projects I've handled.
-          <!-- I'm deeply passionate about [Your Passion or Cause]. My motivation stems from [Reasons or Values]. I believe in [Your Beliefs or Principles] and strive to [Your Aspirations]. -->
-          <!-- <p>In the future, I aim to [Your Future Goals or Aspirations]. I'm excited about [Specific Projects or Areas] and look forward to [Your Vision for the Future].</p> -->
-          <br>Feel free to explore my portfolio to learn more about my work. If you'd like to get in touch, I'd love to connect. You can reach me at my email address or connect with me on my social media accounts.</p>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects">
+      <h2>Projects</h2>
+
+      <div class="card">
+        <h3>Project One</h3>
+        <table>
+          <tr>
+            <td class="top-align">Role:</td>
+            <td class="top-align pad-left">DevOps Engineer</td>
+          </tr>
+          <tr>
+            <td class="top-align">Task:</td>
+          </tr>
+          <tr>
+            <td class="top-align right-align">&bull;</td>
+            <td class="top-align pad-left">Designed and implemented a CI/CD pipeline to automate the migration of Apigee objects from a legacy server environment to Google Cloud Platform (GCP), ensuring a streamlined, consistent, and error-resistant deployment process. The pipeline integrates version control, validation, and deployment stages to facilitate continuous integration and delivery, reduce manual intervention, and improve reliability during migration. It supports efficient configuration management, environment promotion, and rollback capabilities, enabling seamless transition and ongoing maintenance of API proxies and related components in the cloud environment.</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Project Two</h3>
+        <table>
+          <tr>
+            <td class="top-align">Role:</td>
+            <td class="top-align pad-left">DevOps Engineer/Quality Admin</td></tr>
+          <tr>
+            <td class="top-align">Task:</td>
+          </tr>
+          <tr>
+            <td class="top-align right-align">&bull;</td>
+            <td class="top-align pad-left">Provided support for developer CI/CD pipelines by maintaining and troubleshooting build and deployment workflows, ensuring smooth and reliable code integration and delivery across environments. Collaborated with development teams to optimize pipeline performance, resolve issues, and implement best practices for automation, monitoring, and security. Assisted in configuring tools, managing pipeline dependencies, and improving overall efficiency to enable faster releases and minimize downtime.</td>
+          </tr>
+          <tr>
+            <td class="top-align right-align">&bull;</td>
+            <td class="top-align pad-left">Managed SonarQube administration and infrastructure, ensuring high availability, performance, and reliability of the code quality platform across development teams. Responsibilities included configuring projects and quality gates, managing user access and permissions, maintaining underlying infrastructure, and performing upgrades, backups, and performance tuning. Collaborated with engineering teams to integrate SonarQube into CI/CD pipelines, troubleshoot issues, and enforce code quality standards to support secure and maintainable software delivery.</td>
+          </tr>
+        </table>
       </div>
 
     </div>
-  </div>
-  
-  
-  <!-- <h2 class="fw-bolder">Work Experience</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <h2 class="fw-bolder">Skills</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+  </section>
 
-</div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ndatles01@gmail.com">ndatles01@gmail.com</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/npd07">Nino Datiles</a></p>
+      <p>LinkIn: <a href="https://www.linkedin.com/in/ni%C3%B1o-datiles-6622221b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Nino Datiles</a></p>
+    </div>
+  </section>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    // hide/show sidebar
-    $(document).ready(function() {
-      $("#menu-toggle-2").click(function(e) {
-        e.preventDefault();
-        $("#sidebar").toggleClass("active");
-        if ($("#sidebar").hasClass("active")) {
-          $(this).find("i").removeClass("fa fa-bars").addClass("fa fa-times");
-        } else {
-          $(this).find("i").removeClass("fa fa-times").addClass("fa fa-bars");
-        }
-      });
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Nino P. Datiles</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
     });
-
-    // fade-in effect for text
-    $(document).ready(function() {
-      $('.fade-in-text').addClass('active'); // Add the 'active' class to trigger the fade-in effect
-    });
-
   </script>
 
 </body>
