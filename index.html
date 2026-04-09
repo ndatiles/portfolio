@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="InGsFoxl0rluegDfNbvn2-ZvQ30vAuNgPmIVJcXYOLM" />
   <title>Portfolio - Niño P. Datiles</title>
 
   <style>
@@ -59,6 +58,36 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    /* LOGO */
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* SVG icons */
+    .logo .icon {
+      width: 1em;
+      height: 1em;
+      margin: 0 2px;
+      fill: currentColor;
+    }
+
+    /* Lightning color */
+    .logo .zap {
+      color: orange;
+      transform: scale(1.1);
+    }
+
+    /* Gear stays white */
+    .logo .gear {
+      color: white;
+      width: 1.2em;
+      height: 1.2em;
     }
 
     /* HERO */
@@ -126,7 +155,19 @@
 
   <!-- NAVBAR -->
   <nav id="navbar">
-    <h1>⚙NINO⚙</h1>
+    <!-- <h1>NINO⚙</h1> -->
+    <h1 class="logo">
+      N
+      <!-- ⚡ Lightning -->
+      <svg viewBox="0 0 24 24" class="icon zap">
+        <path d="M13 2L3 14h7l-1 8 10-12h-7z"/>
+      </svg>
+      N
+      <!-- ⚙ Gear -->
+      <svg viewBox="0 0 24 24" class="icon gear">
+        <path d="M19.14 12.94a7.49 7.49 0 000-1.88l2.03-1.58-1.92-3.32-2.39.96a7.28 7.28 0 00-1.63-.95l-.36-2.54h-3.84l-.36 2.54c-.58.23-1.12.54-1.63.95l-2.39-.96-1.92 3.32 2.03 1.58a7.49 7.49 0 000 1.88L2.73 14.5l1.92 3.32 2.39-.96c.5.41 1.05.72 1.63.95l.36 2.54h3.84l.36-2.54c.58-.23 1.12-.54 1.63-.95l2.39.96 1.92-3.32-2.03-1.58zM12 15.5A3.5 3.5 0 1112 8a3.5 3.5 0 010 7.5z"/>
+      </svg>
+    </h1>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -203,7 +244,8 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:ndatles01@gmail.com">ndatles01@gmail.com</a></p>
       <p>Facebook: <a href="https://www.facebook.com/npd07">Nino Datiles</a></p>
-      <p>LinkIn: <a href="https://www.linkedin.com/in/ni%C3%B1o-datiles-6622221b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Nino Datiles</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ni%C3%B1o-datiles-6622221b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Nino Datiles</a></p>
+      <p>Viber: +639452134329</p>
     </div>
   </section>
 
