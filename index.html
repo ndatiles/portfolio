@@ -133,6 +133,23 @@
       border-radius: 8px;
     }
 
+    /* Contacts */
+    .contact-links  {
+      color: #1e90ff;          /* bright blue */
+      text-decoration: none;  /* remove underline */
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contact-links:hover {
+      color: #63b3ff;          /* lighter blue on hover */
+      text-decoration: underline;
+    }
+
+    .contact-links:active {
+      color: #ff6b6b;          /* click effect */
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -243,9 +260,9 @@
   <section id="contact">
     <div class="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:ndatles01@gmail.com">ndatles01@gmail.com</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/npd07">Nino Datiles</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/ni%C3%B1o-datiles-6622221b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Nino Datiles</a></p>
+      <p>Email: <a class="contact-links" href="mailto:ndatles01@gmail.com">ndatles01@gmail.com</a></p>
+      <p>Facebook: <a class="contact-links" href="https://www.facebook.com/npd07">Nino Datiles</a></p>
+      <p>LinkedIn: <a class="contact-links" href="https://www.linkedin.com/in/ni%C3%B1o-datiles-6622221b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Nino Datiles</a></p>
       <p>Viber: +639452134329</p>
     </div>
   </section>
